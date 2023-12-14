@@ -1,0 +1,5 @@
+export URL="https://jsonplaceholder.typicode.com/todos/"
+export MAX_GOROUTINE=5
+export MAX_TODO=20
+export TODO_ID_START=1
+export TODO_ID_TYPE="even"

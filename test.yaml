@@ -1,0 +1,6 @@
+todo:
+  url: "https://example.com"
+  max_goroutine: 10
+  max_todo: 100
+  todo_id_start: 1
+  todo_id_type: "int"

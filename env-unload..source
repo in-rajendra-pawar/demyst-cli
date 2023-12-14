@@ -1,0 +1,6 @@
+export CONFIG_FILE_NAME=""
+export URL=""
+export MAX_GOROUTINE=0
+export MAX_TODO=0
+export TODO_ID_START=0
+export TODO_ID_TYPE=""

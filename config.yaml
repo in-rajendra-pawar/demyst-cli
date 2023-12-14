@@ -1,0 +1,6 @@
+todo: 
+  url: "https://jsonplaceholder.typicode.com/todos/"
+  max_goroutine: 5
+  max_todo: 20
+  todo_id_start: 1
+  todo_id_type: even

@@ -1,8 +1,14 @@
 package main
 
-import "github.com/in-rajendra-pawar/demysttools/cmd"
+import (
+	"fmt"
+	"github.com/in-rajendra-pawar/demysttools/cmd"
+)
 
 func main() {
 
-	cmd.Run()
+	err := cmd.Run()
+	if err != nil {
+		fmt.Println(err.Error())
+	}
 }

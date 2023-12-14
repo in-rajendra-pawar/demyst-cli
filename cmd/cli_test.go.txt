@@ -1,0 +1,45 @@
+package cmd
+
+import ( 
+	"os"
+	"testing"
+) 
+
+// Define a test function
+func TestRun(t *testing.T) {
+  // Use a table-driven approach to test different scenarios
+  tests := []struct {
+    name    string   // The name of the test case
+    args    []string // The arguments to pass to the Run function
+    wantErr bool     // Whether an error is expected or not
+  }{
+    {
+      name:    "valid command and option",
+      args:    []string{"demysttools", "net", "todo"},
+      wantErr: false,
+    },
+    {
+      name:    "invalid command",
+      args:    []string{"demysttools", "foo", "bar"},
+      wantErr: true,
+    },
+    {
+      name:    "not enough arguments",
+      args:    []string{"demysttools"},
+      wantErr: true,
+    },
+  }
+
+  // Iterate over the test cases
+  for _, tt := range tests {
+    // Use t.Run to run each subtest
+    t.Run(tt.name, func(t *testing.T) {
+      // Set the os.Args to the test case arguments
+      os.Args = tt.args
+      // Call the Run function and check for errors
+      if err := Run(); (err != nil) != tt.wantErr {
+        t.Errorf("Run() error = %v, wantErr %v", err, tt.wantErr)
+      }
+    })
+  }
+}
